@@ -16,3 +16,10 @@ RegisterNetEvent("redrum:didnotmakethiseither")
 AddEventHandler("redrum:didnotmakethiseither", function()
     TriggerClientEvent('redrum:didnotmakethiseither-c', -1, source)
 end)
+
+--[[
+    RegisterNetEvent("redrum:didnotmakethiseither") -- MAKE YOUR OWN EVENT
+AddEventHandler("redrum:didnotmakethiseither", function() -- ADD THE EVENT HANDLER
+    TriggerClientEvent('redrum:didnotmakethiseither-c', -1, source) -- MATCH YOUR CLIENT EVENT THAT YOUR MADE
+end)
+]]--

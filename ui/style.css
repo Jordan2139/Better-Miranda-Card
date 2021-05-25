@@ -43,3 +43,22 @@
 	  
   }
   
+  /*
+#vcard{ -- EDIT TO MATCH YOUR NEW EVENT
+	display: none;
+  }
+#vcard .contenair{ -- EDIT TO MATCH YOUR NEW EVENT
+	  position:fixed;
+	  z-index: 2;    
+	  width: 692px;									
+	  height:551px;									
+	  left:90%;										
+	  top:80%;										
+	  margin:-350px 0 0 -500px;    					
+	  text-align: center;
+	  background: url('img/bg-img2.png') no-repeat;				
+	  padding: none; 							
+	  
+  }
+  
+  */

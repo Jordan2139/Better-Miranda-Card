@@ -25,7 +25,8 @@ files {
   'ui/img/bg-img.png',
   'ui/img/bg-img2.png',
   'ui/style.css',
-  'ui/script.js'
+  'ui/script.js',
+  --  'ui/img/bg-img2.png', -- MAKE SURE TO ADD YOUR NEW IMAGE HERE
 }
 
 client_scripts {

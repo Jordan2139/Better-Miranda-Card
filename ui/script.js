@@ -30,6 +30,16 @@ $(function(){
 					$('#vcard').fadeOut( "slow" );
 				}
 			}
+			/*
+				if (item !== undefined && item.type === "vcard") { -- EDIT TO MATCH YOURS
+
+				if (item.display === true) {
+					$('#vcard').delay(100).fadeIn( 0 ); -- EDIT HERE
+				} else if (item.display === false) {
+					$('#vcard').fadeOut( "slow" ); -- EDIT HERE
+				}
+			}
+			*/
 		});
 	};
 });
