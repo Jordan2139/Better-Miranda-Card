@@ -11,3 +11,8 @@ RegisterNetEvent("redrum:didnotmakethis")
 AddEventHandler("redrum:didnotmakethis", function()
     TriggerClientEvent('redrum:didnotmakethis-c', -1, source)
 end)
+
+RegisterNetEvent("redrum:didnotmakethiseither")
+AddEventHandler("redrum:didnotmakethiseither", function()
+    TriggerClientEvent('redrum:didnotmakethiseither-c', -1, source)
+end)
