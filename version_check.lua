@@ -4,7 +4,7 @@
 
 ----------------------------------------------------------------------------------------------
                   -- !WARNING! !WARNING! !WARNING! !WARNING! !WARNING! --
-        -- DO NOT TOUCH THIS FILE OR YOU /WILL/ FUCK SHIT UP! EDIT THE CONFIG.LUA --
+        -- DO NOT TOUCH THIS FILE OR YOU /WILL/ FUCK SHIT UP! THERE IS NOTHING TO EDIT --
 -- DO NOT BE STUPID AND WHINE TO ME ABOUT THIS BEING BROKEN IF YOU TOUCHED THE LINES BELOW. --
 ----------------------------------------------------------------------------------------------
 
@@ -12,21 +12,14 @@
 local label = 
 [[ 
   //
-  || 
-  || 
-  ||        ______________  ______
-  ||       / ____/  _/ __ \/_  __/
-  ||      / /    / // / / / / /   
-  ||     / /____/ // /_/ / / /    
-  ||     \____/___/\____/ /_/                              
-  ||   
+  ||         🆔💳 | Better ID | 💳🆔   
   ||   Created by Rocket Development w/ NAT2K15
   ||]]
   
 Citizen.CreateThread(function()
 	local CurrentVersion = GetResourceMetadata(GetCurrentResourceName(), 'version', 0)
 	if not CurrentVersion then
-		print('^1CIOT Version Check Failed!^7')
+		print('^1Better-ID Version Check Failed!^7')
 	end
 
 	function VersionCheckHTTPRequest()
