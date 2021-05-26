@@ -27,6 +27,7 @@ RegisterCommand('mcard', function()
       if (IsControlJustPressed(1, 51)) then
         display = false
         TriggerEvent('mcard:display', false)
+        ClearPedTasks(PlayerPedId())
         StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0)
       end
     end
@@ -50,7 +51,7 @@ end)
     local startTime = GetGameTimer()
     local delay = 120000
     if pid ~= myid then
-      if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 5 then -- If the person is within 25 meters run this
+      if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 1.99 then 
         TriggerEvent('mcard:display', true)
         TriggerEvent('anima', true)    
             while display do
@@ -63,6 +64,7 @@ end)
                 if (IsControlJustPressed(1, 51)) then
                     display = false
                     TriggerEvent('mcard:display', false)
+                    ClearPedTasks(PlayerPedId())
                     StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0)
                   end  
             end          
@@ -78,6 +80,10 @@ RegisterNetEvent("anima")
 AddEventHandler("anima", function(inputText) 
   RequestAnimDict("amb@code_human_wander_clipboard@male@base")
   TaskPlayAnim(GetPlayerPed(-1),"amb@code_human_wander_clipboard@male@base", "static", 5.0, -1, -1, 50, 0, false, false, false)
+  local IsInVehicle = IsPedInAnyVehicle(PlayerPedId(), false)
+	if not IsInVehicle then
+		TaskStartScenarioInPlace(PlayerPedId(), "WORLD_HUMAN_CLIPBOARD", 0, true)
+	end
 end)
   
   
@@ -108,6 +114,7 @@ RegisterCommand('vcard', function()
       if (IsControlJustPressed(1, 51)) then
         display = false
         TriggerEvent('vcard:display', false)
+        ClearPedTasks(PlayerPedId())
         StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0)
       end
     end
@@ -123,7 +130,7 @@ AddEventHandler('redrum:didnotmakethiseither-c', function(id)
   local startTime = GetGameTimer()
   local delay = 120000
   if pid ~= myid then
-    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 5 then -- If the person is within 25 meters run this
+    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 1.9 then -- If the person is within 25 meters run this
       TriggerEvent('vcard:display', true)
       TriggerEvent('anima', true)    
           while display do
@@ -136,6 +143,7 @@ AddEventHandler('redrum:didnotmakethiseither-c', function(id)
               if (IsControlJustPressed(1, 51)) then
                   display = false
                   TriggerEvent('vcard:display', false)
+                  ClearPedTasks(PlayerPedId())
                   StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0)
                 end  
           end          
@@ -186,6 +194,7 @@ end)
       if (IsControlJustPressed(1, 51)) then -- YOU CAN EDIT THIS TO MATCH YOUR LIKING, SEE BUTTON REFERENCE https://docs.fivem.net/docs/game-references/controls/
         display = false -- KEEP THIS
         TriggerEvent('vcard:display', false) -- EDIT TO MATCH YOUR EVENT NAME (YOU'LL CREATE THAT SOON)
+        ClearPedTasks(PlayerPedId())
         StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0) -- KEEP THIS TO ACTUALLY STOP THE ANIMATION
       end -- KEEP THIS OR SYNTAX ERROR
     end -- KEEP THIS OR SYNTAX ERROR
@@ -201,7 +210,7 @@ AddEventHandler('redrum:didnotmakethiseither-c', function(id) -- ADD AN EVENT HA
   local startTime = GetGameTimer() -- KEEP THIS
   local delay = 120000 -- KEEP THIS
   if pid ~= myid then -- IF pid DOES NOT = myid
-    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 5 then -- If the person is within 5 meters run this
+    if GetDistanceBetweenCoords(GetEntityCoords(GetPlayerPed(myid)), GetEntityCoords(GetPlayerPed(pid)), true) < 1.9 then -- If the person is within 5 meters run this
       TriggerEvent('vcard:display', true) -- EDIT TO MATCH YOUR EVENT NAME
       TriggerEvent('anima', true) -- KEEP THIS
           while display do -- KEEP THIS
@@ -214,6 +223,7 @@ AddEventHandler('redrum:didnotmakethiseither-c', function(id) -- ADD AN EVENT HA
               if (IsControlJustPressed(1, 51)) then -- YOU CAN EDIT THIS TO MATCH YOUR LIKING, SEE BUTTON REFERENCE https://docs.fivem.net/docs/game-references/controls/
                   display = false -- KEEP THIS
                   TriggerEvent('vcard:display', false) -- EDIT TO MATCH YOUR EVENT
+                  	ClearPedTasks(PlayerPedId())
                   StopAnimTask(GetPlayerPed(-1), 'amb@code_human_wander_clipboard@male@base', 'static', 1.0) -- KEEP THIS TO ACTUALLY STOP THE ANIMATION
                 end  -- KEEP
           end -- KEEP
