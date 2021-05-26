@@ -1,5 +1,5 @@
 # Better Miranda Card
-Better ID Card is a simple FiveM script created by the developers of Rocket Development in collaboration with [@NAT2K15](https://github.com/NAT2K15). This script was created to show that things as simple as this should not be paid assets. We are looking to crack down on the poorly made and over priced paid assets in the FiveM community.
+Better ID Card is a simple FiveM script created by the developers of Rocket Development in collaboration with [@NAT2K15](https://github.com/NAT2K15). This script was created to show that things as simple as this should not be paid assets. We are looking to crack down on the poorly made and over priced paid assets in the FiveM community. BeeTeaDubs' this isn't IP locked or obfuscated, so 'yk actually complies with FiveM ToS and allows you to make edits
 
 ## Features
 * Show those around you the card
