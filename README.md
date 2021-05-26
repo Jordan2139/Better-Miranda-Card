@@ -13,3 +13,7 @@ Better ID Card is a simple FiveM script created by the developers of Rocket Deve
 * Collaborated On This Project: [@NAT2K15](https://github.com/NAT2K15)
 
 ## Screenshots
+
+## Discords
+* [Rocket Development](https://rocketdev.zone)
+* [NAT2K15](https://discord.gg/RquDVTfDwu)
